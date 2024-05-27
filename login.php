@@ -31,6 +31,7 @@
 	echo "connected";
 
 
+
 	if(isset($_POST['buttonLogin'])){
 		$userID = $_POST['userID'];
 		$password= $_POST['Password'];
@@ -51,10 +52,8 @@
 						alert('Incorrect password');
 				  </script>";
 		}else{
-			$_SESSION['UserID']= $row[0];
+			$_SESSION['UserID']= $userID;
 			header("location: connector.php");
 		}	
-	}
-		
-
+	}		
 ?>
