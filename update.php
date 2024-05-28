@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $connect = mysqli_connect("localhost", "root", "", "piolo") 
+    $connect = mysqli_connect("localhost", "root", "", "roomradar") 
     or die("Error in connection: ");
 
     // Check if the updateid parameter is set
@@ -54,9 +54,9 @@
                 <label for="password">Used ID:</label><br>
                 <input type="text" id="UserID" name="UserID" placeholder="Enter user ID" autocomplete="off" value="<?php echo $userID;?>" readonly><br><br>
                 <label for="password">Password:</label><br>
-                //or eh edit nimo ang type ="text" para ma show ang password ditso
+        
                 <input type="password" id="Password" name="Password" placeholder="Enter password" autocomplete="off" value="<?php echo $password;?>"><br><br>
-                //to toggle imong password
+        
 
                 <input type="checkbox" id="togglePassword" class="toggle-password"> Show Password<br><br>
                 <label for="phoneNumber">Phone Number:</label><br>
@@ -71,7 +71,7 @@
                 <br><br>
         <button type="submit" id="btnSubmit" name="submit_button">Update</button>
     </form>
-        <script>//para nis toggle passsowrd
+        <script>
             document.getElementById('togglePassword').addEventListener('change', function() {
             var passwordField = document.getElementById('Password');
             if (this.checked) {

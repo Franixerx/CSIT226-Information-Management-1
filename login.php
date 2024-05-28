@@ -5,7 +5,7 @@
     <section class="login">
         <div class="content">
             <h2>Sign In</h2>
-            <form action="connector.php" method="post">
+            <form action="" method="post">
                 <div class="inputBox">
                     <label>UserID: </label>
                     <input type="text" name="userID" required>
@@ -33,7 +33,7 @@
 
 
 	if(isset($_POST['buttonLogin'])){
-		$userID = $_POST['userID'];
+		$userID = $_POST['userID'];			
 		$password= $_POST['Password'];
 		echo $password;
 		$sql ="SELECT UserID, Password FROM useraccount WHERE UserID='$userID'";
